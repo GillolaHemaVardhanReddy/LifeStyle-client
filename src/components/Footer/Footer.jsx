@@ -8,26 +8,53 @@ import whatsapp_icon from '../Assets/whatsapp_icon.png'
 const Footer = () => {
   return (
     <div className='footer'>
-        <div className='footer-logo'>
-            <img src={footer_logo} alt=''/>
-            <p>LifeStyle</p>
-        </div>
-        <ul className='footer-links'>
-            <li>Company</li>
-            <li>Products</li>
-            <li>Offices</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-        <div className='footer-social-icons'>
-            <div className='footer-icons-container'>
-                <img src={instagram_icon} alt=''/>
+        <div className='footer-logo-phone'>
+            <div className='footer-logo'>
+                <img src={footer_logo} alt=''/>
+                <p>LifeStyle</p>
             </div>
-            <div className='footer-icons-container'>
-                <img src={pintester_icon} alt=''/>
+            <div className='footer-social-icons-phone'>
+                    <div className='footer-icons-container-phone'>
+                        <img src={instagram_icon} alt=''/>
+                    </div>
+                    <div className='footer-icons-container-phone'>
+                        <img src={pintester_icon} alt=''/>
+                    </div>
+                    <div className='footer-icons-container-phone'>
+                        <img src={whatsapp_icon} alt=''/>
+                    </div>
+                </div>
             </div>
-            <div className='footer-icons-container'>
-                <img src={whatsapp_icon} alt=''/>
+        <div className='footer-links-holder'>
+            <div>
+                <ul className='footer-links'>
+                    <p className='footer-links-heading'>Important Links</p>
+                    <li>Company</li>
+                    <li>Products</li>
+                    <li>Offices</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div className='footer-links'>
+                <h2>Get to Know Us</h2>
+                <h5>About Us</h5>
+                <h5>Careers</h5>
+                <h5>Press Releases</h5>
+                <h5>Amazon Science</h5>
+                <h5>Sell on LifeStyle</h5>
+            </div>
+            <div className='footer-social-icons'>
+                <h3>Media</h3>
+                <div className='footer-icons-container'>
+                    <img src={instagram_icon} alt=''/>
+                </div>
+                <div className='footer-icons-container'>
+                    <img src={pintester_icon} alt=''/>
+                </div>
+                <div className='footer-icons-container'>
+                    <img src={whatsapp_icon} alt=''/>
+                </div>
             </div>
         </div>
         <div className='footer-copyright'>

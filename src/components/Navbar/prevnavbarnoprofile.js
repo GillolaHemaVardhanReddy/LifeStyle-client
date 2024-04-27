@@ -6,17 +6,16 @@ import { useContext } from 'react';
 import { ShopContext } from '../../context/ShopContext';
 import { useRef } from 'react';
 import nav_dropdown from '../Assets/nav_dropdown.png'
-import profile_pic from '../Assets/profile_pic.png'
 
 const Navbar = () => {
     const [menu,setMenu]=useState("shop");
     const {getTotalCartItems} = useContext(ShopContext);
     const menuRef = useRef();
+
     const dropdown_toggle = (e)=>{
         menuRef.current.classList.toggle('nav-menu-visible');
         e.target.classList.toggle('open');
     }
-    
   return (
     <div className='navbar'>
         <img className='nav-dropdown' onClick={dropdown_toggle} src={nav_dropdown} alt=''/>
@@ -32,7 +31,7 @@ const Navbar = () => {
         </ul>
         <div className='nav-login-cart'>
             { localStorage.getItem('auth-token') 
-                ? <Link to='/profile' className='profile-page'> <p>name</p> <img src={profile_pic} alt='' className='profile-img'/></Link>
+                ? <button onClick={()=> {localStorage.removeItem('auth-token'); window.location.replace("/")}}>Logout</button>
                 :<Link to='/login'><button>login</button></Link>
             }
             <div className='nav-login-cart'>

@@ -1,0 +1,124 @@
+.Signup{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(90deg,#f3ddae 50%,#ecc6ba 60%);
+    padding: 80px 0px;
+    border-bottom: 200px;
+}
+.Signup-container{
+    width: 420px;
+    height: 540px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: auto;
+    padding: 40px 60px;
+}
+
+.Signup-container h1{
+    margin: 10px 0px;
+}
+
+.Signup-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 20px;
+}
+
+.Signup-fields input{
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+}
+
+.Signup-container button{
+    width: 420px;
+    height: 42px;   
+    background: #ff4141;
+    margin-top: 30px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.Signup-Signup{
+    margin-top: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Signup-Signup span{
+    color: #ff4141;
+    font-weight: 600;
+}
+.Signup-agree{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+}
+.Signup-agree p{
+    margin: 0px 0px;
+}
+a{
+    text-decoration: none;
+}
+@media(max-width:1280px){
+    .Signup{
+        padding-top: 50px;
+    }
+    .Signup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 590px;
+    }
+    .Signup-container h1{
+        margin: 10px 0px;
+    }
+    .Signup-fields{
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .Signup-fields input{
+        height: 65px;
+        width: 93%;
+    }
+    .Signup-container button{
+        width: 100%;
+    }
+    .Signup-Signup{
+        font-size: 16px;
+    }
+    .Signup-agree{
+        font-size: 14px;
+        gap: 10px;
+    }
+}
+
+@media(max-width:800px){
+    .Signup-container{
+        padding: 20px 30px;
+    }
+    .Signup-container h1{
+        font-size: 24px;
+    }
+    .Signup-fields{
+        margin-top: 20px;
+    }
+    .Signup-fields input{
+        height: 50px;
+    }
+    .Signup-container button{
+        height: 50px;
+        font-size: 16px;
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo, useState} from 'react'
 import './ProductDisplay.css'
 import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png';
@@ -8,6 +8,7 @@ import { ShopContext } from '../../context/ShopContext';
 
 const ProductDisplay = (props) => {
     const {product} = props;
+    const [size,setSize] = useState('Z');
     const {addToCart} = useContext(ShopContext);
   return (
     <div className='productdisplay'>
@@ -43,14 +44,14 @@ const ProductDisplay = (props) => {
             <div className='productdisplay-right-size'>
                 <h1>Select Size</h1>
                 <div className='productdisplay-right-sizes'>
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>XL</div>
-                    <div>XXL</div>
+                    <div onClick={()=>setSize('S')} className={size==='S'?'selected':'notselected'}>S</div>
+                    <div onClick={()=>setSize('M')} className={size==='M'?'selected':'notselected'}>M</div>
+                    <div onClick={()=>setSize('L')} className={size==='L'?'selected':'notselected'}>L</div>
+                    <div onClick={()=>setSize('XL')} className={size==='XL'?'selected':'notselected'}>XL</div>
+                    <div onClick={()=>setSize('XXL')} className={size==='XXL'?'selected':'notselected'}>XXL</div>
                 </div>
             </div>
-            <button onClick={()=>addToCart(product.id)}>ADD TO CART</button>
+            <button onClick={()=> size==='Z'? alert("please select a size") : addToCart(product.id)}>ADD TO CART</button>
             <p className='productdisplay-right-category'><span>Category: </span>Women, T-shirt, Crop Top</p>
             <p className='productdisplay-right-category'><span>Tags: </span>Modern, Latest</p>
         </div>
@@ -58,4 +59,4 @@ const ProductDisplay = (props) => {
     </div>
   )
 }
-export default ProductDisplay;
+export default memo(ProductDisplay);

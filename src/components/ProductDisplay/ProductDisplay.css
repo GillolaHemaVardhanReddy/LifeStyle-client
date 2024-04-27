@@ -67,8 +67,14 @@
     margin: 30px 0px;
     gap: 20px;
 }
-
-.productdisplay-right-sizes div{
+.selected{
+    padding: 18px 24px;
+    background: #fbfbfb;
+    border: 1px solid green;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.notselected{
     padding: 18px 24px;
     background: #fbfbfb;
     border: 1px solid #ebebeb;

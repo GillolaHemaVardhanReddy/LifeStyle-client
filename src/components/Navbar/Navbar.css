@@ -1,17 +1,31 @@
 .navbar{
     display: flex;
+    background: linear-gradient(180deg,#e8cbb6 , #f8ffe122 60%);
     justify-content: space-around;
-    padding: 16px;
+    padding: 0px 16px 0px 16px;
     box-shadow: 0 1px 3px -2px black;
     align-items: center;
 }
+.profile-img{
+    width: 40px;
+    border: 1px solid black;
+    padding: 5px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
 .nav-logo img{
-    width: 100px;
+    width: 80px;
 }
 .nav-logo{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.profile-page{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .nav-logo p{
     color: #171717;
@@ -55,21 +69,21 @@
 
 .nav-login-cart button{
     width: 157px;
-    height: 58px;
+    height: 50px;
     outline: none;
     border: 1px solid #7a7a7a;
     border-radius: 75px;
     color: #515151;
     font-size: 20px;
     font-weight: 500;
-    background: white;
+    background: linear-gradient(0deg,#ffece1 ,#f8ffe122 60%);
     cursor: pointer;
 }
 .nav-login-cart button:hover{
     box-shadow: rgba(10, 9, 9, 0.05) 0 6px 24px, rgba(0,0,0,0.08) 0 8 0 1px;
 }
 .nav-login-cart button:active{
-    background: #f3f3f3;
+    background: #f6ca9c;
 }
 
 .nav-cart-count{
@@ -87,6 +101,11 @@
 }
 .nav-dropdown{
     display: none;
+}
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 @media(max-width:1280px){
     .navbar{
@@ -148,12 +167,16 @@
     }
     .nav-menu{
         display: none;
-        height: 80px;
-        width: 100%;
+        height: 100%;
+        width: 30%;
         position: absolute;
         background-color: white;
-        justify-content: center;
-        top: 50px;
+        flex-direction: column;
+        padding-left: 0px;
+        padding: 5px 40px;
+        top: 70px;
+        left: -20px;
+        align-items: start;
     }
     .nav-menu-visible{
         display: flex;
@@ -174,6 +197,18 @@
     .nav-menu{
         height: 70px;
         top: 50px;
+    }
+    .nav-menu{
+        height: 100%;
+        width: 30%;
+        position: absolute;
+        background-color: white;
+        flex-direction: column;
+        padding-left: 0px;
+        padding: 5px 40px;
+        top: 66px;
+        left: -20px;
+        align-items: start;
     }
     .nav-login-cart{
         transform: scale(0.8);

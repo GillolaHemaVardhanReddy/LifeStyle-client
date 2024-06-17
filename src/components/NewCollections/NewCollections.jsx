@@ -10,7 +10,7 @@ const NewCollections = () => {
   const [new_collection,setNew_collection] = useState([]);
 
   const getdata = async ()=>{
-    const respo = await axios("http://localhost:4000/newcollections");
+    const respo = await axios("https://lifestyle-server-n4sv.onrender.com/newcollections");
     setNew_collection(respo.data); 
 }
   useEffect(()=>{getdata()},[]);

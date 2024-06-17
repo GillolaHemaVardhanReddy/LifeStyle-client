@@ -10,7 +10,7 @@ const Popular = () => {
 
   useEffect(()=>{
     async function fetchData(){
-    const resp = await axios.get("http://localhost:4000/popularinwomen");
+    const resp = await axios.get("https://lifestyle-server-n4sv.onrender.com/popularinwomen");
     setData_product(resp.data);
   } fetchData()},[])
 

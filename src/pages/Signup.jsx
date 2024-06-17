@@ -20,7 +20,7 @@ const Signup = () => {
     if(formData.username.length>0 && formData.email.length>0 && formData.password.length>0 && formData.repassword.length>0){
       console.log("signup function executed",formData);
       try{
-        const response = await axios.post("http://localhost:4000/signup",formData,{
+        const response = await axios.post("https://lifestyle-server-n4sv.onrender.com/signup",formData,{
           headers:{
             Accept: 'application/form-data',
             'Content-Type':'application/json',

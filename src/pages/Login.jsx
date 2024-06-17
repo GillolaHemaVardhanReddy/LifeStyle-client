@@ -11,7 +11,7 @@ const Login = () => {
   });
   const login = async ()=>{
     console.log("login function executed",formData);
-    const response = await axios.post("http://localhost:4000/login",formData,{
+    const response = await axios.post("https://lifestyle-server-n4sv.onrender.com/login",formData,{
       headers:{
         Accept: 'application/form-data',
         'Content-Type':'application/json'

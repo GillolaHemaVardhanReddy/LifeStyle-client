@@ -9,7 +9,7 @@ const Profile = () => {
     async function userData(){
     const auth_token = localStorage.getItem('auth-token');
     if(auth_token){
-        const response = await axios("http://localhost:4000/profile",{
+        const response = await axios("https://lifestyle-server-n4sv.onrender.com/profile",{
                 headers:{
                 'Accept':"application/form-data",
                 'auth-token': auth_token,

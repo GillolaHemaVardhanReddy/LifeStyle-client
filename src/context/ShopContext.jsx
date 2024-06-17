@@ -19,10 +19,13 @@ const ShopContextProvider = (props)=>{
     useEffect(()=>{
         async function collectData(){
         const auth_token = localStorage.getItem('auth-token');
-        const response = await axios("http://localhost:4000/allproducts");
+        // const response = await axios("http://localhost:4000/allproducts");
+        const response = await axios("https://lifestyle-server-n4sv.onrender.com/allproducts");
+        // https://lifestyle-server-n4sv.onrender.com
         setAll_product(response.data);
         if(auth_token){
-            const resp = await axios.post("http://localhost:4000/getcart",{},{
+            // const resp = await axios.post("http://localhost:4000/getcart",{},{
+            const resp = await axios.post("https://lifestyle-server-n4sv.onrender.com/getcart",{},{
                 headers:{
                     'Accept':"application/form-data",
                     'auth-token': auth_token,
@@ -38,7 +41,7 @@ const ShopContextProvider = (props)=>{
     const addToCart = async (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            const resp = await axios.post("http://localhost:4000/addcart",{
+            const resp = await axios.post("https://lifestyle-server-n4sv.onrender.com/addcart",{
                 "itemId":itemId,
             },{
                 headers:{
@@ -53,7 +56,7 @@ const ShopContextProvider = (props)=>{
     const removefromCart = async (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            const resp = await axios.post("http://localhost:4000/removefromcart",{
+            const resp = await axios.post("https://lifestyle-server-n4sv.onrender.com/removefromcart",{
                 "itemId":itemId,
             },{
                 headers:{

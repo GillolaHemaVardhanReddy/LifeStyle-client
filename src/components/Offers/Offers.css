@@ -94,6 +94,7 @@
 @media(max-width:800px){
     .offers{
         margin-bottom: 60px;
+        padding: 0px 20px;
     }
     .offers-left h1{
         font-size: 22px;

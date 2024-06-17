@@ -32,7 +32,7 @@ const Navbar = () => {
         </ul>
         <div className='nav-login-cart'>
             { localStorage.getItem('auth-token') 
-                ? <Link to='/profile' className='profile-page'> <p>name</p> <img src={profile_pic} alt='' className='profile-img'/></Link>
+                ? <button className='log-out-btn' onClick={()=> {localStorage.removeItem('auth-token'); window.location.replace("/")}}>Logout</button>
                 :<Link to='/login'><button>login</button></Link>
             }
             <div className='nav-login-cart'>
